@@ -56,8 +56,10 @@
 									label.addClass('go-ext-labels--success');
 								} else {
 									label
-										.attr('target', '_blank')
-										.attr('href', 'https://github.inn.ru/4game-web/com.4game/compare/' + storageItem)
+										.attr({
+											target: '_blank',
+											href: 'https://github.inn.ru/4game-web/com.4game/compare/' + storageItem
+										})
 										.addClass('go-ext-labels--info');
 								}
 							} else if (counts[item.id] && counts[item.id] >= retryCountUntilFail) {
